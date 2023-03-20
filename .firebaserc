@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ik163-lab2": {
+      "hosting": {
+        "Laboration2": [
+          "ik163-lab2"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ik163-lab2"
+  }
+}

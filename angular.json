@@ -43,7 +43,13 @@
                   "maximumError": "4kb"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "fileReplacements": [
+                {
+                  "replace": "Laboration2/app/src/enviroments/enviroment.ts",
+                  "with": "Laboration2/app/src/enviroments/enviroment.prod.ts"
+                }
+              ]
             },
             "development": {
               "buildOptimizer": false,
@@ -90,6 +96,16 @@
               "src/styles.css"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "Laboration2:build:production",
+            "firebaseProject": "ik163-lab2",
+            "firebaseHostingSite": "ik163-lab2"
           }
         }
       }
