@@ -12,6 +12,8 @@ import { environment } from '../environments/environment';
 import { InputComponent } from './co/input/input.component';
 import { MenuComponent } from './co/menu/menu.component';
 import { DefaultComponent } from './co/default/default.component';
+import { BestSongComponent } from './co/best-song/best-song.component';
+import { IconicSongComponent } from './co/iconic-song/iconic-song.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { DefaultComponent } from './co/default/default.component';
     InputComponent,
     MenuComponent,
     DefaultComponent,
+    BestSongComponent,
+    IconicSongComponent,
   ],
   imports: [
     BrowserModule,

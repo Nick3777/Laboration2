@@ -27,11 +27,11 @@
 }
 
 .container .box:nth-child(1) .details{
-    background-image: url("../../../assets/R.jpeg");
+    background: grey;
 }
 
 .container .box:nth-child(2) .details{
-    background-image: url("../../../assets/R.jpeg");
+    background: lightskyblue;
 }
 
 .container .box .details .content{
@@ -67,8 +67,7 @@
 }
 
 .container .box .details .content a:hover{
-    background: #fff;
-    color: #26262626;
+    background: white;
 }
 
 .container .box .details .content .fa{
