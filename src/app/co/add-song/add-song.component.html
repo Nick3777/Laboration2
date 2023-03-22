@@ -8,12 +8,12 @@
 
     <br/>
     <label>Song Link: </label>
-    <input type="url"
+    <input type="url" name="songURL" required
            [(ngModel)]="dummy.songLink"
-           name="songLink"
-           #name="ngModel" required/>
+           #name="ngModel"/>
 
     <br/><br/>
+
     <button type="submit" [disabled]="songForm.invalid">Add song</button>
 </form>
 
