@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+    margin-left: 450px;
+    margin-right: 100px;
+    justify-content: space-between;
+}
+
+ul{
+    width: 500px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+ul li{
+    display:flex;
+    height: 50px;
+    background: deepskyblue;
+    padding: 10px 20px;
+    transition: 0.5s;
+    margin: 25px;
+}
