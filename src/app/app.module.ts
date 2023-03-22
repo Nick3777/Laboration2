@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-
+import {AngularFireAuth, AngularFireAuthModule} from "@angular/fire/compat/auth";
 import { AppComponent } from './app.component';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -14,6 +14,7 @@ import { DefaultComponent } from './co/default/default.component';
 import { BestSongComponent } from './co/best-song/best-song.component';
 import { IconicSongComponent } from './co/iconic-song/iconic-song.component';
 import { AddSongComponent } from './co/add-song/add-song.component';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { AddSongComponent } from './co/add-song/add-song.component';
     AppRoutingModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]

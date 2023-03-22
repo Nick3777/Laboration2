@@ -1,15 +1,56 @@
-.container{
-    margin-left:300px;
-    height: 500px;
+.container {
+    position: absolute;
+    top:50%;
+    margin-left:450px;
+    transform: translateY(-50%);
+    width: 600px;
+    height: 350px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
 }
-.container .submit-form{
+.container .login {
+    text-align: center;
+    padding-left:20px;
     position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    background: #182B3A;
+    width: 600px;
+    height: 350px;
+    transition: 0.5s;
+    box-sizing: border-box;
+    border :5px solid white;
+    border-radius: 25px;
+    overflow: hidden;
 }
 
-.container .submit-form .form-group{
-    width: 100%;
+input[type=text], input[type=password]{
+    margin-bottom: 2%;
+    padding: 12px 20px;
+    width: 80%;
+    border-radius: 10px;
+    border: 2px solid;
+    box-sizing: border-box;
+}
+
+
+input[type=submit]{
+    border-radius: 10px;
+    background-color: royalblue;
+    color: white;
+    border: none;
+    margin-top: 3%;
+    padding: 14px 20px;
+    width: 80%;
+    box-sizing: border-box;
     font-size: large;
+}
+
+input[type=submit]:hover{
+    transform: scale(1.1);
+    color:deepskyblue;
+}
+
+h2{
+    margin:15px;
+    color: #fff;
 }
