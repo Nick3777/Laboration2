@@ -1,0 +1,14 @@
+<h2>Add a new song</h2>
+<form #songForm="ngForm" (ngSubmit)="onSubmit(songForm)">
+    <label>Song Title: </label>
+    <input type="text"
+           [(ngModel)]="dummy.songTitle" name="songTitle"
+           #songName="ngModel"/>
+    <br/>
+    <label>Song Link: </label>
+    <input type="text"
+           [(ngModel)]="dummy.songLink"
+           name="songLink"
+           #songTitle="ngModel" />
+    <br/><br/>
+    <button type="submit">Add song</button> </form>

@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
@@ -14,6 +13,7 @@ import { MenuComponent } from './co/menu/menu.component';
 import { DefaultComponent } from './co/default/default.component';
 import { BestSongComponent } from './co/best-song/best-song.component';
 import { IconicSongComponent } from './co/iconic-song/iconic-song.component';
+import { AddSongComponent } from './co/add-song/add-song.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +23,7 @@ import { IconicSongComponent } from './co/iconic-song/iconic-song.component';
     DefaultComponent,
     BestSongComponent,
     IconicSongComponent,
+    AddSongComponent
   ],
   imports: [
     BrowserModule,

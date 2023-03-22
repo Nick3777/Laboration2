@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
-
+import { SongList} from "../../services/songList";
+import { Song } from "../song"
 
 @Component({
   selector: 'app-best-song',
@@ -8,19 +8,11 @@ import { FormBuilder } from '@angular/forms';
   styleUrls: ['./best-song.component.css']
 })
 export class BestSongComponent {
-  name='Hello'
-  checkoutForm = this.formBuilder.group({
-    name: '',
-    address: ''
-  });
-
-  constructor(
-      private formBuilder: FormBuilder,
-  ) {}
-
-  onSubmit(): void {
-    // Process checkout data here
-    this.checkoutForm.reset();
+  songs!: Song[];
+  constructor(private songService: SongList) {
+  }
+  ngOnInit() {
+    this.songs = this.songService.getSongs();
   }
 }
 
