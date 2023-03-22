@@ -3,12 +3,12 @@
     <label>Song Title: </label>
     <input type="text"
            [(ngModel)]="dummy.songTitle" name="songTitle"
-           #songName="ngModel"/>
+           #songTitle="ngModel" required/>
     <br/>
     <label>Song Link: </label>
     <input type="text"
            [(ngModel)]="dummy.songLink"
            name="songLink"
-           #songTitle="ngModel" />
+           #songLink="ngModel" required/>
     <br/><br/>
     <button type="submit">Add song</button> </form>

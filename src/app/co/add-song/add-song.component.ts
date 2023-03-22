@@ -15,7 +15,7 @@ export class AddSongComponent implements OnInit {
   ngOnInit() {}
   onSubmit({ value }: { value: Song }) {
     this.courseService.addSongs(value);
-    this.dummy = new Song('ID','Name');
+    this.dummy = new Song('title','link');
     this.form.reset();
   }
 }

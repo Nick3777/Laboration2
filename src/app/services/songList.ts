@@ -9,9 +9,9 @@ export class SongList {
     songs: Song[];
     constructor() {
         this.songs = [
-            new Song('title1','https://www.youtube.com/watch?v=t0LSUxncYaM'),
-            new Song('title1','https://www.youtube.com/watch?v=8PKNK4N9IJE'),
-            new Song('title1','https://www.youtube.com/watch?v=5hWI9Yw8Lnk')
+            new Song('Heat Waves','https://www.youtube.com/watch?v=mRD0-GxqHVo'),
+            new Song('Sunflower','https://www.youtube.com/watch?v=ApXoWvfEYVU'),
+            new Song('Enemy','https://www.youtube.com/watch?v=D9G1VOjN_84')
         ]
     }
     getSongs(): Song[] {

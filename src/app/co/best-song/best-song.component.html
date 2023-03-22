@@ -1,7 +1,8 @@
-<div>
+<div class="container">
     <ul>
         <li *ngFor="let song of songs">
-            {{ song.songTitle }} {{ song.songLink }} <!-- here you can use anything to display one song. -->
+            {{ song.songTitle }}<br>
+            {{ song.songLink }}<br>
         </li>
     </ul>
     <app-add-song></app-add-song>
