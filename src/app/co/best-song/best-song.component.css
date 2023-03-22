@@ -7,16 +7,23 @@
 
 ul{
     width: 500px;
-    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     box-sizing: border-box;
 }
 
 ul li{
+    text-align: center;
     display:flex;
     background: deepskyblue;
     padding: 10px 20px;
     transition: 0.5s;
-    margin: 10px;
+    margin: 15px;
+    border: 2px solid white;
+}
+
+ul li:hover {
+transform: scale(1.1);
 }
 
 .containerForm{
@@ -26,4 +33,6 @@ ul li{
     border :5px solid;
     border-radius: 25px;
     overflow: hidden;
+    height: 150px;
+    transform: scale(1.5);
 }

@@ -1,8 +1,7 @@
 <div class="container">
     <ul>
         <li *ngFor="let song of songs">
-            {{ song.songTitle }}<br>
-            {{ song.songLink }}<br>
+            <h1><a href="{{ song.songLink }}">{{ song.songTitle }}</a></h1>
         </li>
     </ul>
     <div class="containerForm">
