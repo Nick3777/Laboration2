@@ -1,0 +1,30 @@
+<div>
+
+    <div>Position: <span data-ng-bind="vm.job.position"></span></div>
+
+    <br/>
+
+    <form name="form" data-ng-submit="vm.create(job)">
+
+        <label for="position">Enter the Position</label>
+        <input id="position" name="vm.job.position" type="text" data-ng-model="vm.job.position" />
+
+
+        <div>
+            <br/>
+            Requirements:
+            <br/>
+            <ul>
+                <li data-ng-repeat="r in vm.job.requirements">{{name}}</li>
+            </ul>
+            <input id="name" name="requirement.name" type="text" data-ng-model="requirement.name" />
+            <input type="button" value="Add Requirement" class="button" data-ng-click="vm.addRequirement(requirement)"/>
+        </div>
+
+        <br/><br/>
+
+
+        <button>Create Job</button>
+
+    </form>
+</div>
