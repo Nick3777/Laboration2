@@ -1,0 +1,15 @@
+.container{
+    margin-left:300px;
+    height: 500px;
+}
+.container .submit-form{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.container .submit-form .form-group{
+    width: 100%;
+    font-size: large;
+}
