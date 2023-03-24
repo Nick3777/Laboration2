@@ -1,19 +1,27 @@
-<h2>Add a new song</h2>
-<form #songForm="ngForm" (ngSubmit)="onSubmit(songForm)" >
-    <label>Song Title: </label>
-    <input type="text" name="songTitle" required
-           [(ngModel)]="dummy.songTitle"
-           #name="ngModel" />
+<div>
 
+    <form [formGroup]="urlForm" (ngSubmit)="onSubmit()" >
+        <label>Song Title:</label><br>
+        <input type="text" formControlName="title" name="sTitle"/>
+        <div *ngIf="urlForm.controls['title'].valid ==false && urlForm.controls['title'].touched">
+            <div *ngIf="urlForm?.controls?.['title']?.errors?.['required']" style="background-color: red">
+                Title is required
+            </div>
+        </div>
+        <br>
 
-    <br/>
-    <label>Song Link: </label>
-    <input type="url" name="songURL" required
-           [(ngModel)]="dummy.songLink"
-           #name="ngModel"/>
-
-    <br/><br/>
-
-    <button type="submit" [disabled]="songForm.invalid">Add song</button>
-</form>
-
+        <label>Song URL:</label><br>
+        <input type="text" formControlName="url" name="sUrl"/>
+        <div *ngIf="urlForm.controls['url'].valid == false && urlForm.controls['url'].touched">
+            <div *ngIf="urlForm?.controls?.['url']?.errors?.['required']" style="background-color: red">
+                URL is required
+            </div>
+            <div *ngIf="urlForm?.controls?.['url']?.errors?.['pattern']" style="background-color: red">
+                URL format is wrong.
+            </div>
+        </div>
+        <div class="button">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</div>

@@ -13,13 +13,14 @@ ul{
 }
 
 ul li{
-    text-align: center;
+    justify-content: center;
     display:flex;
     background: deepskyblue;
     padding: 10px 20px;
     transition: 0.5s;
     margin: 15px;
     border: 2px solid white;
+    border-radius: 20px;
 }
 
 ul li:hover {
@@ -27,12 +28,13 @@ transform: scale(1.1);
 }
 
 .containerForm{
+    display: flex;
+    height: max-content;
     padding: 15px;
     margin-top: 10%;
     background: springgreen;
     border :5px solid;
     border-radius: 25px;
     overflow: hidden;
-    height: 150px;
     transform: scale(1.5);
 }

@@ -3,7 +3,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 @Injectable({
     providedIn: 'root'
 })
-export class Service {
+export class ServiceU {
     constructor(private db: AngularFirestore) { }
 
     getAllUsers() {

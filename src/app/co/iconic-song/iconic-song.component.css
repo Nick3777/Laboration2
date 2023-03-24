@@ -8,6 +8,7 @@
 }
 
 ul{
+    list-style-type: none;
     padding-left: 10px;
     padding-right: 10px;
     width: 500px;
@@ -15,15 +16,18 @@ ul{
 }
 
 ul li{
-    text-align: center;
-    display:flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: deepskyblue;
     padding: 10px 20px;
     transition: 0.5s;
     margin: 15px;
     box-sizing: border-box;
     border: 2px solid white;
+    border-radius: 20px;
 }
+
 
 ul li:hover {
     transform: scale(1.1);

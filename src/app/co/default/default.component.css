@@ -30,11 +30,11 @@
 }
 
 .container .box:nth-child(1) .details{
-    background: grey;
+    background: green;
 }
 
 .container .box:nth-child(2) .details{
-    background: lightskyblue;
+    background: deepskyblue;
 }
 
 .container .box .details .content{
@@ -49,6 +49,7 @@
 }
 
 .container .box .details .content a{
+    font-size: large;
     display: inline-block;
     padding: 5px 20px;
     color: mediumblue;
@@ -74,11 +75,11 @@
 }
 
 .container .box .details .content .fa{
-    font-size: 80px;
+    font-size: 120px;
     color: #fff;
 }
 
-.container .box .details .content h3{
+.container .box .details .content h2{
     margin: 0;
     padding: 10px 0;
     color:#fff;

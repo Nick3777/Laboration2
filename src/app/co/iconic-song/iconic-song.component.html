@@ -1,19 +1,7 @@
 <div class="container">
     <ul>
-        <li>
-            <h1><a href="">Blinding Lights</a></h1>
-        </li>
-        <li>
-            <h1><a href="">Shape of You</a></h1>
-        </li>
-        <li>
-            <h1><a href="">Dance Monkey</a></h1>
-        </li>
-        <li>
-            <h1><a href="">Someone You Loved</a></h1>
-        </li>
-        <li>
-            <h1><a href="">Rockstar</a></h1>
+        <li *ngFor="let song of iSongs">
+            <h1><a href="{{song.songLink}}">{{song.songTitle}}</a></h1>
         </li>
     </ul>
 </div>
