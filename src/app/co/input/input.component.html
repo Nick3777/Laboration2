@@ -9,8 +9,7 @@
                                       pattern="(?=.*\d)(?=(.*[A-Z]){2}).{8,}"
                                       #password/>
 
-      <input type="submit" name="submit" value="Login" (submit)="validation(username.value,password.value)" />
+      <input type="submit" name="submit" value="Login" (click)="validation(username.value,password.value)" />
     </form>
 </div>
 </div>
-<p id="message1">You are logged IN {{validation(username.value,password.value)}}</p>

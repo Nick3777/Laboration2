@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {loggedIn} from "../../services/loggedIn";
 
 @Component({
   selector: 'app-menu',
@@ -7,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class MenuComponent {
 
+  constructor(private service: loggedIn) {
+  }
+  logDisplay(){
+    if (this.service.log)
+    {return 'Logged'}
+    return 'Login'
+  }
+  logRouter(){
+    if (this.service.log)
+    {return 'logged'}
+    return 'login'
+  }
 }

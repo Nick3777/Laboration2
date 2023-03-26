@@ -1,22 +1,22 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import { SongList} from "../../services/songList";
 import { Song } from "../song"
 import { ServiceFbS } from "../../services/fbAddSong"
 import { FormControl, FormsModule, FormGroup, Validators } from '@angular/forms';
+import { loggedIn} from "../../services/loggedIn";
 
 @Component({
   selector: 'app-add-song',
   templateUrl: './add-song.component.html',
   styleUrls: ['./add-song.component.css']
 })
-export class AddSongComponent implements OnInit {
+export class AddSongComponent{
   dummy = new Song('','');
   urlRegEx =
       '[-a-zA-Z0-9@:%_+.~#?&//=]{2,256}(.[a-z]{2,4})?(/[-a-zA-Z0-9@:%_+.~#?&//=]*)?';
   id: string;
   urlForm: FormGroup;
-  constructor(private songService: SongList, private aFbs: ServiceFbS) {
+  constructor(private songService: SongList, private aFbs: ServiceFbS, private lgI: loggedIn) {
     this.id ='';
     this.urlForm = new FormGroup({
       url: new FormControl('', {
@@ -38,9 +38,8 @@ export class AddSongComponent implements OnInit {
     }
     return outString;
   }
-  ngOnInit() {}
 
-  onSubmit() {
+  formProcess(){
     let formValue = this.urlForm.value;
     this.dummy = new Song(formValue.title,formValue.url);
     this.songService.addSongs(this.dummy);
@@ -48,5 +47,13 @@ export class AddSongComponent implements OnInit {
     this.aFbs.addNewSong(this.id.toString(),this.dummy.songTitle,this.dummy.songLink);
     this.dummy = new Song('','');
     this.urlForm.reset();
+  }
+  onSubmit() {
+    if(!this.urlForm.valid)
+      return;
+    else{
+      if(this.lgI.log)
+        this.formProcess()
+    }
   }
 }
