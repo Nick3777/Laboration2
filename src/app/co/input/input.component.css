@@ -54,3 +54,8 @@ h2{
     margin:15px;
     color: #fff;
 }
+
+#message1, #message2{
+    margin-left: 700px;
+    position: absolute;
+}
