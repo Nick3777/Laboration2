@@ -1,4 +1,5 @@
 .container{
+    position: absolute;
     display: flex;
     margin-left: 300px;
     margin-right: 100px;
@@ -32,6 +33,7 @@ transform: scale(1.1);
     height: max-content;
     padding: 15px;
     margin-top: 10%;
+    margin-left: 150px;
     background: springgreen;
     border :5px solid;
     border-radius: 25px;

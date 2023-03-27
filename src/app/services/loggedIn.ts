@@ -5,4 +5,5 @@ import { Injectable } from '@angular/core';
 })
 export class loggedIn {
     log: boolean = false;
+    nickn: string = '';
 }

@@ -8,9 +8,13 @@ import {Router} from "@angular/router";
   styleUrls: ['./logged.component.css']
 })
 export class LoggedComponent {
+
   constructor(private log: loggedIn, private router:Router){
   }
 
+  loggedUser(){
+    return this.log.nickn;
+  }
   signOut(){
     this.log.log = false;
     this.router.navigate(['/login']);

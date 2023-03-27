@@ -1,8 +1,8 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { SongList} from "../../services/songList";
 import { Song } from "../song"
 import { ServiceFbS } from "../../services/fbAddSong"
-import { FormControl, FormsModule, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { loggedIn} from "../../services/loggedIn";
 
 @Component({
