@@ -1,86 +1,86 @@
 .container {
-    position: absolute;
-    top:50%;
-    margin-left:350px;
-    transform: translateY(-50%);
-    width: 800px;
-    height: 350px;
-    display: flex;
-    justify-content: space-between;
-    box-sizing: border-box;
+  position: absolute;
+  top:50%;
+  margin-left:350px;
+  transform: translateY(-50%);
+  width: 800px;
+  height: 350px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
 
 .container .box{
-    position: relative;
-    width: 350px;
-    height: 350px;
-    transition: 0.5s;
-    box-sizing: border-box;
-    border :5px solid white;
-    border-radius: 25px;
-    overflow: hidden;
+  position: relative;
+  width: 350px;
+  height: 350px;
+  transition: 0.5s;
+  box-sizing: border-box;
+  border :5px solid white;
+  border-radius: 25px;
+  overflow: hidden;
 }
 
 
 .container .box .details{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .container .box:nth-child(1) .details{
-    background: green;
+  background: green;
 }
 
 .container .box:nth-child(2) .details{
-    background: deepskyblue;
+  background: deepskyblue;
 }
 
 .container .box .details .content{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    padding:20px;
-    box-sizing: border-box;
-    text-align: center;
-    transition: 0.5s;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  padding:20px;
+  box-sizing: border-box;
+  text-align: center;
+  transition: 0.5s;
 }
 
 .container .box .details .content a{
-    font-size: large;
-    display: inline-block;
-    padding: 5px 20px;
-    color: mediumblue;
-    border:2px solid mediumblue;
-    text-decoration: none;
-    transition: 0.5s;
-    border-radius: 20px;
-    transform: scale(0);
+  font-size: large;
+  display: inline-block;
+  padding: 5px 20px;
+  color: mediumblue;
+  border:2px solid mediumblue;
+  text-decoration: none;
+  transition: 0.5s;
+  border-radius: 20px;
+  transform: scale(0);
 }
 
 .container .box:hover .details .content a{
-    transform: scale(1);
+  transform: scale(1);
 }
 
 .container .box:hover{
-    transform: scale(1.1);
-    z-index: 1;
-    box-shadow: 0 5px 20px;
+  transform: scale(1.1);
+  z-index: 1;
+  box-shadow: 0 5px 20px;
 }
 
 .container .box .details .content a:hover{
-    background: white;
+  background: white;
 }
 
 .container .box .details .content .fa{
-    font-size: 120px;
-    color: #fff;
+  font-size: 120px;
+  color: #fff;
 }
 
 .container .box .details .content h2{
-    margin: 0;
-    padding: 10px 0;
-    color:#fff;
+  margin: 0;
+  padding: 10px 0;
+  color:#fff;
 }
