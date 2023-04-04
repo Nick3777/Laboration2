@@ -20,8 +20,18 @@
                 URL format is wrong.
             </div>
         </div>
-        <div class="button">
-            <button type="submit">Submit</button>
+
+      <br>
+      <label>Description:</label><br>
+      <input type="text" formControlName="desc" name="sDesc"/>
+      <div *ngIf="urlForm.controls['title'].valid ==false && urlForm.controls['desc'].touched">
+        <div *ngIf="urlForm?.controls?.['desc']?.errors?.['required']" style="background-color: red">
+          Title is required
         </div>
+      </div>
+      <br>
+      <div class="button">
+        <button type="submit">Submit</button>
+      </div>
     </form>
 </div>

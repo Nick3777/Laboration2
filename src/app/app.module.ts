@@ -15,6 +15,7 @@ import { BestSongComponent } from './co/best-song/best-song.component';
 import { IconicSongComponent } from './co/iconic-song/iconic-song.component';
 import { AddSongComponent } from './co/add-song/add-song.component';
 import { LoggedComponent } from './co/logged/logged.component';
+import { SongComponent } from './co/song/song.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { LoggedComponent } from './co/logged/logged.component';
     BestSongComponent,
     IconicSongComponent,
     AddSongComponent,
-    LoggedComponent
+    LoggedComponent,
+    SongComponent
   ],
     imports: [
         BrowserModule,
