@@ -24,6 +24,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { LinkListComponent } from './co/link-list/link-list.component';
+import {CdkTableModule} from "@angular/cdk/table";
+import {MatTableModule} from "@angular/material/table";
+import {MatInputModule} from "@angular/material/input";
+import {MatSelectModule} from "@angular/material/select";
 
 
 @NgModule({
@@ -37,24 +42,29 @@ import { MatListModule } from '@angular/material/list';
         AddSongComponent,
         LoggedComponent,
         SongComponent,
-        NavigationComponent
+        NavigationComponent,
+        LinkListComponent
     ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        FormsModule,
-        AngularFireModule.initializeApp(environment.firebaseConfig),
-        AngularFireDatabaseModule,
-        AngularFireAuthModule,
-        ReactiveFormsModule,
-        BrowserAnimationsModule,
-        LayoutModule,
-        MatToolbarModule,
-        MatButtonModule,
-        MatSidenavModule,
-        MatIconModule,
-        MatListModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    CdkTableModule,
+    MatTableModule,
+    MatInputModule,
+    MatSelectModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

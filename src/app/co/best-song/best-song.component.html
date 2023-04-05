@@ -1,7 +1,7 @@
 <div class="container">
     <ul>
-      <li *ngFor="let l of Linkkk">
-        <h1><a href="YOLO ">{{ l.title }}</a></h1>
+      <li *ngFor="let song of songs">
+        <h1><a href="{{ song.songLink }}">{{ song.songTitle }}</a></h1>
       </li>
       <ng-template #noData>No Data Available</ng-template>
     </ul>

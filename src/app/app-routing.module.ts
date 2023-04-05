@@ -6,6 +6,7 @@ import { BestSongComponent} from "./co/best-song/best-song.component";
 import {IconicSongComponent} from "./co/iconic-song/iconic-song.component";
 import {LoggedComponent} from "./co/logged/logged.component";
 import {SongComponent} from "./co/song/song.component";
+import {LinkListComponent} from "./co/link-list/link-list.component";
 
 const routes: Routes = [
   { path: 'login', component: InputComponent },
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'bestSong', component: BestSongComponent },
   { path: 'iconicSong', component: IconicSongComponent },
   { path: 'logged', component: LoggedComponent },
-  { path: 'bestSong/:id', component: SongComponent}
+  { path: 'linklist/:id', component: SongComponent},
+  { path: 'linklist', component: LinkListComponent}
 
 ];
 
