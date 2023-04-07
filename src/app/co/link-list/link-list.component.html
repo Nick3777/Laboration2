@@ -1,15 +1,22 @@
-<table cdk-table [dataSource]="Linkkk!">
+<mat-toolbar>Welcome to the Linklist
+  <button class="addLinkButton" mat-raised-button color="primary" (click)="openAddLinkDialog()">Add a Link</button>
+</mat-toolbar>
+
+<table mat-table [dataSource]="Linkkk!" class="table">
   <ng-container matColumnDef="title">
-    <th mat-header-cell *matHeaderCellDef> Title </th>
+    <th mat-header-cell *matHeaderCellDef  class="co-title"> Title </th>
     <td mat-cell *matCellDef="let Linkkk"> {{Linkkk.title}} </td>
   </ng-container>
   <ng-container matColumnDef="desc">
     <th mat-header-cell *matHeaderCellDef> Description </th>
     <td mat-cell *matCellDef="let Linkkk"> {{Linkkk.desc}}</td>
   </ng-container>
+  <ng-container matColumnDef="buttons">
+    <th mat-header-cell *matHeaderCellDef> Open </th>
+    <td mat-cell *matCellDef="let Linkkk" class="co-utils"> <a href="{{Linkkk.url}}" target=”_blank” mat-icon-button aria-label="Open Youtube in a new Tab"><mat-icon>launch</mat-icon> </a></td>
+  </ng-container>
 
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"[routerLink]="row.id"> </tr>
-
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="row.id"> </tr>
 </table>

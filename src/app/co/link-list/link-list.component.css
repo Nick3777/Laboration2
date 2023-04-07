@@ -1,4 +1,4 @@
-.demo-table {
+.table {
   width: 100%;
 }
 
@@ -7,11 +7,20 @@
   border-top: 1px solid transparent;
   cursor: pointer;
 }
-
+.mat-mdc-cell{
+  height: 50px;
+}
 .mat-mdc-row:hover .mat-mdc-cell {
   border-color: currentColor;
 }
 
-.demo-row-is-clicked {
-  font-weight: bold;
+.addLinkButton{
+  position: absolute;
+  right: 15px;
+}
+.co-title{
+  width: 40%;
+}
+.co-utils{
+  width: 48px;
 }

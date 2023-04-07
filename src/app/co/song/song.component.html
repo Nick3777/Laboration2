@@ -1,0 +1,13 @@
+<mat-toolbar>{{this.data?.title}}
+<div class="utils">
+  <button mat-icon-button (click)="openAddLinkDialog()">
+    <mat-icon>edit</mat-icon>
+  </button>
+  <button mat-icon-button (click)="deleteLinkSnacki()">
+    <mat-icon>delete</mat-icon>
+  </button>
+</div>
+</mat-toolbar>
+<b>Description: </b> {{data?.desc}}<br>
+
+<iframe width="800" height="500" [src]="ytembedlink" frameborder="0" allowfullscreen></iframe>

@@ -15,3 +15,8 @@
   top: 0;
   z-index: 1;
 }
+.login {
+  position: absolute;
+  right: 50px;
+  font-size: 15px;
+}

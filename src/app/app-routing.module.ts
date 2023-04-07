@@ -7,6 +7,7 @@ import {IconicSongComponent} from "./co/iconic-song/iconic-song.component";
 import {LoggedComponent} from "./co/logged/logged.component";
 import {SongComponent} from "./co/song/song.component";
 import {LinkListComponent} from "./co/link-list/link-list.component";
+import {AddLinkDialogComponent} from "./co/add-link-dialog/add-link-dialog.component";
 
 const routes: Routes = [
   { path: 'login', component: InputComponent },
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'iconicSong', component: IconicSongComponent },
   { path: 'logged', component: LoggedComponent },
   { path: 'linklist/:id', component: SongComponent},
-  { path: 'linklist', component: LinkListComponent}
+  { path: 'linklist', component: LinkListComponent},
+  { path: 'dia', component: AddLinkDialogComponent}
 
 ];
 

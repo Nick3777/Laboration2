@@ -1,0 +1,35 @@
+<h2 mat-dialog-title>Add a new Link</h2>
+
+<mat-dialog-content [formGroup]="form" class="form">
+
+  <mat-form-field class="formfield">
+    <mat-label>Title</mat-label>
+    <mat-error>Please enter a Title</mat-error>
+    <input matInput
+           required="true"
+           placeholder="Give your Entry a title"
+           formControlName="title">
+  </mat-form-field>
+  <mat-form-field class="formfield">
+    <mat-label>Youtube-URL</mat-label>
+    <mat-error>Please enter a valid Youtube URL</mat-error>
+    <input matInput
+           required="true"
+           type="url"
+           placeholder="URL"
+           formControlName="url"
+           required pattern="^(https?\:\/\/)?(www\.youtube\.com|youtu\.be)\/.+$">
+  </mat-form-field>
+  <mat-form-field class="formfield">
+    <mat-label>Description</mat-label>
+    <textarea matInput
+           placeholder="Describe the Song"
+           formControlName="desc"></textarea>
+  </mat-form-field>
+
+</mat-dialog-content>
+
+<mat-dialog-actions class="button">
+  <button mat-raised-button (click)="close()">Close</button>
+  <button mat-raised-button color="primary" [disabled]="form.invalid" (click)="save()">Save</button>
+</mat-dialog-actions>

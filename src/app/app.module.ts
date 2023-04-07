@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {AngularFireAuth, AngularFireAuthModule} from "@angular/fire/compat/auth";
+import {AngularFireAuthModule} from "@angular/fire/compat/auth";
 import { AppComponent } from './app.component';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -29,6 +29,10 @@ import {CdkTableModule} from "@angular/cdk/table";
 import {MatTableModule} from "@angular/material/table";
 import {MatInputModule} from "@angular/material/input";
 import {MatSelectModule} from "@angular/material/select";
+import { AddLinkDialogComponent } from './co/add-link-dialog/add-link-dialog.component';
+import {MatDialogModule} from "@angular/material/dialog";
+import {MatSnackBar} from "@angular/material/snack-bar";
+import {MatPaginatorModule} from "@angular/material/paginator";
 
 
 @NgModule({
@@ -43,7 +47,8 @@ import {MatSelectModule} from "@angular/material/select";
         LoggedComponent,
         SongComponent,
         NavigationComponent,
-        LinkListComponent
+        LinkListComponent,
+        AddLinkDialogComponent
     ],
   imports: [
     BrowserModule,
@@ -63,9 +68,12 @@ import {MatSelectModule} from "@angular/material/select";
     CdkTableModule,
     MatTableModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    MatDialogModule,
+    MatPaginatorModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [AddLinkDialogComponent, MatSnackBar],
+  bootstrap: [AppComponent],
+  entryComponents: [AddLinkDialogComponent]
 })
 export class AppModule { }
