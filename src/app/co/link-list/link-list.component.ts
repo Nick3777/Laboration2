@@ -5,8 +5,8 @@ import {Link} from "../link";
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 import {AddLinkDialogComponent} from "../add-link-dialog/add-link-dialog.component";
 import {MatTableDataSource} from "@angular/material/table";
-import {MatPaginator} from "@angular/material/paginator";
-import {MatSort, Sort} from "@angular/material/sort";
+import {MatSort} from "@angular/material/sort";
+import {MatPaginator} from '@angular/material/paginator';
 
 
 @Component({
@@ -23,8 +23,10 @@ export class LinkListComponent implements AfterViewInit{
   constructor(private ser: ServiceService, private dialog: MatDialog) {
   }
   @ViewChild(MatSort) sort: MatSort | undefined;
+  @ViewChild(MatPaginator) paginator: MatPaginator|undefined;
   ngAfterViewInit() {
-    if(this.sort){this.dataSource.sort = this.sort};
+    if(this.sort){this.dataSource.sort = this.sort}
+    if(this.paginator){this.dataSource.paginator = this.paginator}
   }
   ngOnInit(){
     this.getLinks();
