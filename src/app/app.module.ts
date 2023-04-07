@@ -33,6 +33,7 @@ import { AddLinkDialogComponent } from './co/add-link-dialog/add-link-dialog.com
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {MatPaginatorModule} from "@angular/material/paginator";
+import {MatSortModule} from "@angular/material/sort";
 
 
 @NgModule({
@@ -71,6 +72,7 @@ import {MatPaginatorModule} from "@angular/material/paginator";
     MatSelectModule,
     MatDialogModule,
     MatPaginatorModule,
+    MatSortModule,
   ],
   providers: [AddLinkDialogComponent, MatSnackBar],
   bootstrap: [AppComponent],
