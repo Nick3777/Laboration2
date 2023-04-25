@@ -9,7 +9,7 @@
       <a mat-list-item routerLink="/linklist">Linklist</a>
       <a mat-list-item routerLink="/bestSong">Best Songs</a>
       <a mat-list-item routerLink="/iconicSong">Iconic Songs</a>
-      <a mat-list-item routerLink="login">Login</a>
+      <a mat-list-item routerLink="{{logRouter()}}">{{logDisplay()}}</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -23,7 +23,9 @@
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       Laboration 2
-      <div class="login"><app-logged></app-logged></div>
+      <div class="login">
+          {{loggedUser()}}
+      </div>
     </mat-toolbar>
     <!-- Add Content Here -->
     <router-outlet></router-outlet>

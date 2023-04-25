@@ -1,25 +1,29 @@
 .container {
     position: absolute;
     top:50%;
+    padding: 0;
     margin-left:250px;
     transform: translateY(-50%);
     width: 600px;
     height: 350px;
     display: flex;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
     justify-content: space-between;
     box-sizing: border-box;
+    overflow: hidden;
 }
 .container .login {
+    margin: 0;
     text-align: center;
     padding-left:20px;
     position: relative;
     background: #182B3A;
     width: 600px;
+
     height: 350px;
     transition: 0.5s;
     box-sizing: border-box;
-    border :5px solid white;
-    border-radius: 25px;
     overflow: hidden;
 }
 
