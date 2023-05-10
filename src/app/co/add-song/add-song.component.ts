@@ -13,7 +13,7 @@ import {Link} from "../link";
 })
 export class AddSongComponent{
   dummy = new Song('','');
-  lel = new Link('','','');
+  lel = new Link('','','', 0, []);
   urlRegEx =
       '[-a-zA-Z0-9@:%_+.~#?&//=]{2,256}(.[a-z]{2,4})?(/[-a-zA-Z0-9@:%_+.~#?&//=]*)?';
   id: string;
@@ -38,7 +38,7 @@ export class AddSongComponent{
 
   formProcess(){
     let formValue = this.urlForm.value;
-    this.lel = new Link(formValue.title, formValue.desc, formValue.url);
+    this.lel = new Link(formValue.title, formValue.desc, formValue.url, 0, []);
     this.ser.create(this.lel);
   }
   onSubmit() {

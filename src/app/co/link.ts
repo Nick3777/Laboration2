@@ -4,9 +4,13 @@ export class Link {
   title?: string;
   desc?: string;
   url?: string;
- constructor(t: string, d: string, u: string) {
+  likes: number;
+  userLikes: string[];
+ constructor(t: string, d: string, u: string, l: number, ls: string[]) {
    this.title = t;
    this.desc = d;
    this.url = u;
+   this.likes = l;
+   this.userLikes = ls
  }
 }
