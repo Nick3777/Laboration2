@@ -6,6 +6,8 @@ import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 import {AddLinkDialogComponent} from "../add-link-dialog/add-link-dialog.component";
 import {MatSnackBar} from "@angular/material/snack-bar";
+import {loggedIn} from "../../services/loggedIn";
+
 @Component({
   selector: 'app-song',
   templateUrl: './song.component.html',
@@ -23,7 +25,8 @@ export class SongComponent {
 
   private sub: any;
 
-  constructor(private ser: ServiceService, private route: ActivatedRoute, private sanitizer: DomSanitizer, private dialog: MatDialog, private snacki: MatSnackBar, private router: Router) {
+  constructor(private ser: ServiceService, private route: ActivatedRoute, private sanitizer: DomSanitizer,
+              private dialog: MatDialog, private snacki: MatSnackBar, private router: Router, private logged: loggedIn) {
     this.id='';
   }
 
@@ -77,10 +80,14 @@ export class SongComponent {
     this.dialog.open(AddLinkDialogComponent, dialogConfig);
   }
   deleteLinkSnacki(){
-    let delSnack = this.snacki.open('Do you really want to delete this?', 'YES!', {duration: 3000});
-    delSnack.onAction().subscribe(()=> {
-      this.deleteLink();
-    })
+    if(this.logged.log){
+      let delSnack = this.snacki.open('Do you really want to delete this?', 'YES!', {duration: 3000});
+      delSnack.onAction().subscribe(()=> {
+        this.deleteLink();
+      })
+    }else{
+      this.snacki.open('You are not logged in', 'Close', {duration: 3000});
+    }
   }
   deleteLink(): void {
     if (this.id) {

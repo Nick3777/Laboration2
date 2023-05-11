@@ -8,6 +8,7 @@ import {MatTableDataSource} from "@angular/material/table";
 import {MatSort} from "@angular/material/sort";
 import {MatPaginator} from '@angular/material/paginator';
 import {loggedIn} from "../../services/loggedIn";
+import {likeBehaviour} from "../../services/likes";
 
 
 @Component({
@@ -21,7 +22,7 @@ export class LinkListComponent implements AfterViewInit{
   dataSource = new MatTableDataSource<Link>();
   log: boolean;
 
-  constructor(private ser: ServiceService, private dialog: MatDialog, private logged: loggedIn) {
+  constructor(private ser: ServiceService, private dialog: MatDialog, private logged: loggedIn, protected lb: likeBehaviour ) {
     this.log = logged.log
   }
   @ViewChild(MatSort) sort: MatSort | undefined;
@@ -61,38 +62,6 @@ export class LinkListComponent implements AfterViewInit{
       likes: 0,
     }
     this.dialog.open(AddLinkDialogComponent, dialogConfig);
-  }
-
-  onLikeClick(event: Event, docId: string, link: Link){
-    event.stopPropagation();
-    if(this.logged.log){
-      const userId = this.logged.nickn;
-      const userLikes = link.userLikes || [];
-      const index = userLikes.indexOf(userId);
-      if (index === -1) {
-        // User has not liked the song yet
-        userLikes.push(userId);
-        const updatedLikes = link.likes + 1;
-        this.ser.update(docId, { likes: updatedLikes, userLikes: userLikes });
-        link.likes = updatedLikes;
-        link.userLikes = userLikes;
-      } else {
-        // User has already liked the song
-        userLikes.splice(index, 1);
-        const updatedLikes = link.likes - 1;
-        this.ser.update(docId, { likes: updatedLikes, userLikes: userLikes });
-        link.likes = updatedLikes;
-        link.userLikes = userLikes;
-      }
-    }
-  }
-
-  isLiked(link: Link): boolean {
-    if (this.logged.log) {
-      const userId = this.logged.nickn;
-      return link.userLikes && link.userLikes.includes(userId);
-    }
-    return false;
   }
 
 }

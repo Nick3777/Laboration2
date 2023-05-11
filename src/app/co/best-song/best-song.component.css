@@ -1,42 +1,28 @@
-.container{
+.list{
+    margin: 2px;
+}
+
+h3{
+    font-size: 24px;
+    font-weight: bold
+}
+
+.liked{
+    color:blue;
+}
+
+.place {
+    font-size: 40px;
+    font-weight: bold;
     position: absolute;
-    display: flex;
-    margin-left: 100px;
-    margin-right: 100px;
-    justify-content: space-between;
-}
-
-ul{
-    width: 500px;
-    padding-left: 10px;
-    padding-right: 10px;
-    box-sizing: border-box;
-}
-
-ul li{
-    justify-content: center;
-    display:flex;
-    background: deepskyblue;
-    padding: 10px 20px;
-    transition: 0.5s;
+    top: 0;
+    left: 0;
     margin: 15px;
-    border: 2px solid white;
-    border-radius: 20px;
+}
+.place span {
+    margin-right: 10px;
 }
 
-ul li:hover {
-transform: scale(1.1);
-}
-
-.containerForm{
-    display: flex;
-    height: max-content;
-    padding: 15px;
-    margin-top: 10%;
-    margin-left: 150px;
-    background: springgreen;
-    border :5px solid;
-    border-radius: 25px;
-    overflow: hidden;
-    transform: scale(1.5);
+.place mat-icon{
+    scale: 2;
 }

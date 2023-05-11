@@ -34,6 +34,8 @@ import {MatDialogModule} from "@angular/material/dialog";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatSortModule} from "@angular/material/sort";
+import {MatGridListModule} from "@angular/material/grid-list";
+import {MatCardModule} from "@angular/material/card";
 
 
 @NgModule({
@@ -51,29 +53,31 @@ import {MatSortModule} from "@angular/material/sort";
         LinkListComponent,
         AddLinkDialogComponent
     ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule,
-    AngularFireAuthModule,
-    ReactiveFormsModule,
-    BrowserAnimationsModule,
-    LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    CdkTableModule,
-    MatTableModule,
-    MatInputModule,
-    MatSelectModule,
-    MatDialogModule,
-    MatPaginatorModule,
-    MatSortModule,
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        AngularFireModule.initializeApp(environment.firebaseConfig),
+        AngularFireDatabaseModule,
+        AngularFireAuthModule,
+        ReactiveFormsModule,
+        BrowserAnimationsModule,
+        LayoutModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatSidenavModule,
+        MatIconModule,
+        MatListModule,
+        CdkTableModule,
+        MatTableModule,
+        MatInputModule,
+        MatSelectModule,
+        MatDialogModule,
+        MatPaginatorModule,
+        MatSortModule,
+        MatGridListModule,
+        MatCardModule,
+    ],
   providers: [AddLinkDialogComponent, MatSnackBar],
   bootstrap: [AppComponent],
   entryComponents: [AddLinkDialogComponent]

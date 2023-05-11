@@ -11,6 +11,6 @@ export class Link {
    this.desc = d;
    this.url = u;
    this.likes = l;
-   this.userLikes = ls
+   this.userLikes = ls;
  }
 }

@@ -1,11 +1,17 @@
-<div class="container">
-    <ul>
-      <li *ngFor="let song of songs">
-        <h1><a href="{{ song.songLink }}">{{ song.songTitle }}</a></h1>
-      </li>
-      <ng-template #noData>No Data Available</ng-template>
-    </ul>
-    <div class="containerForm">
-    <app-add-song></app-add-song>
-    </div>
-</div>
+<mat-grid-list class="list" cols="3" rowHeight="288px">
+    <mat-grid-tile *ngFor="let song of bestSongs; let i = index" [colspan]="1"
+                   [style.backgroundColor]="i == 0 ? 'gold' : i == 1 ? 'silver' : i == 2 ? '#cd7f32' : '#Add8e6'">
+        <div class="tile" style="text-align: center; padding: 20px;">
+            <div class="place" *ngIf="i < 3">
+                <span>{{i + 1}}</span>
+                <mat-icon >emoji_events</mat-icon>
+            </div>
+            <h3><a href="{{song.url}}">{{ song.title }}</a></h3>
+            <button mat-raised-button color="primary" [disabled]="!log" (click)="lb.onLikeClick($event, song.id ?? '', song)">
+                <mat-icon [ngClass]="{ 'liked': lb.isLiked(song) }">thumb_up_alt</mat-icon>
+                {{ song.likes }}
+            </button>
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>
+
