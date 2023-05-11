@@ -1,35 +1,31 @@
-.container{
-    position: absolute;
-    display: flex;
-    margin-left: 250px;
-    margin-right: 100px;
-    justify-content: space-between;
-    box-sizing: border-box;
-    margin-top:0;
+.card {
+    max-width: 700px;
+    margin: 25px auto;
+    padding: 10px;
+    text-align: center;
 }
 
-ul{
-    list-style-type: none;
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 500px;
-    box-sizing: border-box;
+.mat-form-field {
+    width: 100%;
+    padding: 20px;
 }
 
-ul li{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: deepskyblue;
-    padding: 10px 20px;
-    transition: 0.5s;
-    margin: 15px;
-    box-sizing: border-box;
-    border: 2px solid white;
-    border-radius: 20px;
+button{
+    margin-left: 10px;
 }
 
 
-ul li:hover {
-    transform: scale(1.1);
+h3{
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+mat-card {
+    margin-top: 20px;
+}
+
+.mat-list-item {
+    padding-top: 5px;
+    padding-bottom: 5px;
 }

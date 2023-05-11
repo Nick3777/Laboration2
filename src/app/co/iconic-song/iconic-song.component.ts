@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Song} from '../song'
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-iconic-song',
@@ -7,17 +7,22 @@ import {Song} from '../song'
   styleUrls: ['./iconic-song.component.css']
 })
 export class IconicSongComponent {
+  suggestedSongs: { title: string, suggestedBy: string }[] = [];
+  submitted = false;
+  songForm = new FormGroup({
+    title: new FormControl(''),
+    suggestedBy: new FormControl('')
+  });
 
-  iSongs : Song[];
-
-  constructor(){
-    this.iSongs = [
-      new Song('Blinding Lights','https://youtu.be/fHI8X4OXluQ'),
-      new Song('Shape of You','https://youtu.be/JGwWNGJdvx8'),
-      new Song('Dance Monkey','https://youtu.be/q0hyYWKXF0Q'),
-      new Song('Someone You Loved','https://youtu.be/zABLecsR5UE'),
-      new Song('Rockstar','https://youtu.be/UceaB4D0jpo')
-    ]
+  onSubmit() {
+    this.submitted = true;
+    if (this.songForm.valid) {
+      this.suggestedSongs.push({
+        title: this.songForm.value?.title?? '',
+        suggestedBy: this.songForm.value?.suggestedBy?? ''
+      });
+      this.songForm.reset({title:'', suggestedBy: ''})
+    }
   }
 
 }

@@ -1,7 +1,26 @@
-<div class="container">
-    <ul>
-        <li *ngFor="let song of iSongs">
-            <h1><a href="{{song.songLink}}">{{song.songTitle}}</a></h1>
-        </li>
-    </ul>
-</div>
+<mat-card class="card">
+    <mat-card-content>
+        <h2>Suggest a song</h2>
+        <form [formGroup]="songForm" (ngSubmit)="onSubmit()">
+            <mat-form-field>
+                <mat-label>Title</mat-label>
+                <mat-error>Title is required</mat-error>
+                <input matInput formControlName="title" required="true">
+            </mat-form-field>
+            <mat-form-field style="margin-left: 10px;">
+                <mat-label>Suggested By</mat-label>
+                <input matInput formControlName="suggestedBy" required>
+                <mat-error>Suggested By is required</mat-error>
+            </mat-form-field>
+            <button mat-raised-button color="primary" type="submit">Submit</button>
+        </form>
+        <hr>
+        <h2>Suggested Songs</h2>
+        <mat-list>
+            <mat-list-item *ngFor="let song of suggestedSongs">
+                <h3 >{{song.title}}</h3>
+                <p>Suggested by {{song.suggestedBy}}</p>
+            </mat-list-item>
+        </mat-list>
+    </mat-card-content>
+</mat-card>

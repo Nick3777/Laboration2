@@ -3,16 +3,16 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
+    <mat-toolbar >Menu</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item routerLink="/">Home</a>
       <a mat-list-item routerLink="/linklist">Linklist</a>
       <a mat-list-item routerLink="/bestSong">Best Songs</a>
-      <a mat-list-item routerLink="/iconicSong">Iconic Songs</a>
+      <a mat-list-item routerLink="/iconicSong">Suggested Songs</a>
       <a mat-list-item routerLink="{{logRouter()}}">{{logDisplay()}}</a>
     </mat-nav-list>
   </mat-sidenav>
-  <mat-sidenav-content>
+  <mat-sidenav-content class="mat-toolbar">
     <mat-toolbar color="primary">
       <button
         type="button"
