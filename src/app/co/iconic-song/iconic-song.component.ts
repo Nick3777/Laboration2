@@ -10,8 +10,8 @@ export class IconicSongComponent {
   suggestedSongs: { title: string, suggestedBy: string }[] = [];
   submitted = false;
   songForm = new FormGroup({
-    title: new FormControl(''),
-    suggestedBy: new FormControl('')
+    title: new FormControl('', Validators.required),
+    suggestedBy: new FormControl('', Validators.required)
   });
 
   onSubmit() {
@@ -21,8 +21,8 @@ export class IconicSongComponent {
         title: this.songForm.value?.title?? '',
         suggestedBy: this.songForm.value?.suggestedBy?? ''
       });
-      this.songForm.reset({title:'', suggestedBy: ''})
+      this.songForm.reset()
+      this.submitted = false;
     }
   }
-
 }

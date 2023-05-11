@@ -1,15 +1,21 @@
-<div class="container" >
-<div class="login" id="login">
-    <form name="login-form" method="get" action="#">
-      <label for="username"><h2>Username</h2></label>
-      <input type="text" placeholder="username" id="username" required #username/>
+<div class="container">
+    <div class="login" id="login">
+        <form name="login-form" method="get" action="#">
+            <h3>Insert Credentials</h3>
+            <mat-form-field>
+                <mat-label>Username</mat-label>
+                <input matInput type="text" placeholder="username" id="username" required #username>
+            </mat-form-field>
 
-      <label for="password"><h2>Password</h2></label>
-     <input type="password" id="password" placeholder="password" required
-                                      pattern="(?=.*\d)(?=(.*[A-Z]){2}).{8,}"
-                                      #password/>
+            <mat-form-field>
+                <mat-label>Password</mat-label>
+                <input matInput type="password" id="password" placeholder="password" required
+                       pattern="(?=.*\d)(?=(.*[A-Z]){2}).{8,}" #password>
+            </mat-form-field>
 
-      <input type="submit" name="submit" value="Login" (click)="validation(username.value,password.value)" />
-    </form>
-</div>
+            <button mat-raised-button color="primary" (click)="validation(username.value, password.value)">
+                <mat-icon>login</mat-icon> Login
+            </button>
+        </form>
+    </div>
 </div>

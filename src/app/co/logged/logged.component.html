@@ -1,8 +1,9 @@
-<div class="container">
+<mat-card class="container">
     <div class="user-info">
         <h2>Welcome, {{loggedUser()}}</h2>
     </div>
     <div class="logout-button">
-        <button type="submit" (click)="signOut()">Log Out</button>
+        <button mat-raised-button color="primary" (click)="signOut()">Log Out
+        <mat-icon>logout</mat-icon></button>
     </div>
-</div>
+</mat-card>

@@ -1,18 +1,15 @@
 .container {
-    position: absolute;
-    top:50%;
-    margin-left:250px;
-    transform: translateY(-50%);
+    margin: 100px auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 350px;
-    width: 600px;
-    background-color: #182B3A;
-    border-radius: 10px;
+    background-color: darkslategrey;;
+    border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     font-family: Arial, sans-serif;
+    width: 50%;
+    height: 50%;
 }
 
 .user-info {
@@ -34,17 +31,6 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
-}
-
-button {
-    background-color: #007bff;
-    border: none;
-    color: #fff;
-    font-size: 16px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
 }
 
 button:hover {
