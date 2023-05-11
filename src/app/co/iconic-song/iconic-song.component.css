@@ -14,6 +14,9 @@ button{
     margin-left: 10px;
 }
 
+h2{
+    font-size: 28px;
+}
 
 h3{
     margin-top: 12px;
@@ -26,13 +29,27 @@ mat-card {
     margin-top: 20px;
 }
 
-.mat-list-item {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-bottom: 2px solid black;
-}
-
 .mat-list-item-divider {
     border-bottom: 1px solid #ccc;
     margin: 5px;
+    padding: 5px;
+}
+
+span{
+    font-family: cursive;
+    margin-bottom: 5px;
+}
+
+.my-hr {
+    height: 5px;
+    border: none;
+    background-color: black;
+}
+
+.clear-button {
+    background-color: black;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
 }

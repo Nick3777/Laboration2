@@ -6,11 +6,8 @@ body{
 }
 
 .container {
-  position: absolute;
-  top:50%;
-  margin-left:150px;
-  transform: translateY(-50%);
-  width: 800px;
+  margin: 100px auto;
+  width: 75%;
   height: 350px;
   display: flex;
   justify-content: space-between;
@@ -19,7 +16,7 @@ body{
 
 .container .box{
   position: relative;
-  width: 350px;
+  width: 45%;
   height: 350px;
   transition: 0.5s;
   box-sizing: border-box;

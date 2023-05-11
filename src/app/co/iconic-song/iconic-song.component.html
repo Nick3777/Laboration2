@@ -8,18 +8,19 @@
                 <input matInput formControlName="title">
             </mat-form-field>
             <mat-form-field style="margin-left: 10px;">
-                <mat-label >Suggested By</mat-label>
+                <mat-label>Suggested By</mat-label>
                 <input matInput formControlName="suggestedBy">
                 <mat-error>Suggested By is required</mat-error>
             </mat-form-field>
             <button mat-raised-button color="primary" type="submit">Submit</button>
         </form>
-        <hr>
-        <h2>Suggested Songs</h2>
+        <hr class="my-hr">
+        <h2><span>Suggested Songs</span></h2>
+        <button  class="clear-button" mat-button color="warn" (click)="deleteAll()">Delete All</button>
         <mat-list>
-            <mat-list-item class="mat-list-item-divider" *ngFor="let song of suggestedSongs">
+            <mat-list-item class="mat-list-item-divider" *ngFor="let song of suggestedSongs | async">
                 <h3 >{{song.title}}</h3>
-                <p>Suggested by {{song.suggestedBy}}</p>
+                <p><span>Suggested by {{song.sugg_by}}</span></p>
             </mat-list-item>
         </mat-list>
     </mat-card-content>
