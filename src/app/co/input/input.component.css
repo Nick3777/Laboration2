@@ -7,6 +7,7 @@
 }
 
 .login {
+    justify-content: center;
     height: 50%;
     background: darkslategrey;
     border-radius: 15px;
@@ -17,9 +18,8 @@
 }
 
 mat-form-field {
-    margin: auto;
     display: block;
-    width: 80%;
+    width: 100%;
 }
 
 button {
@@ -40,3 +40,10 @@ h3{
     color: lightgrey;
 }
 
+.inputs{
+    margin: auto;
+    border-radius: 15px;
+    padding: 16px 16px 0 16px;
+    border: 2px solid black;
+    width: 82%;
+}
