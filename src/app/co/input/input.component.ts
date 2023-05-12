@@ -24,7 +24,7 @@ export class InputComponent  {
                 this.ServiceLog.nickn = this.users[i].nickname;
                 this.router.navigate(['/logged']);
             }else{
-                this.snacki.open('Username or password incorrect', 'Close', {duration: 3000})
+                this.snacki.open('Username or password incorrect', 'Close', {duration: 3000});
             }
         }
     }

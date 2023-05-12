@@ -12,16 +12,16 @@ import {Observable} from "rxjs";
 export class IconicSongComponent {
   LinkRef: AngularFirestoreCollection<sugg_S>;
   suggestedSongs: Observable<any[]>;
-  constructor(private db: AngularFirestore) {
-    this.LinkRef = db.collection("SuggS");
-    this.suggestedSongs = this.LinkRef.valueChanges();
-  }
-
   submitted = false;
   songForm = new FormGroup({
     title: new FormControl('', Validators.required),
     suggestedBy: new FormControl('', Validators.required)
   });
+
+  constructor(private db: AngularFirestore) {
+    this.LinkRef = db.collection("SuggS");
+    this.suggestedSongs = this.LinkRef.valueChanges();
+  }
 
   onSubmit() {
     this.submitted = true;
@@ -31,7 +31,7 @@ export class IconicSongComponent {
         sugg_by: this.songForm.value.suggestedBy || '',
       };
       this.LinkRef.add(data);
-      this.songForm.reset()
+      this.songForm.reset();
       this.submitted = false;
     }
   }
