@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import {AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument} from "@angular/fire/compat/firestore";
+import {AngularFirestore, AngularFirestoreCollection} from "@angular/fire/compat/firestore";
 import {sugg_S} from "../sugg_song";
 import {Observable} from "rxjs";
 
