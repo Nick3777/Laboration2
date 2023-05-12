@@ -17,8 +17,7 @@ const routes: Routes = [
   { path: 'logged', component: LoggedComponent },
   { path: 'linklist/:id', component: SongComponent},
   { path: 'linklist', component: LinkListComponent},
-  { path: 'dia', component: AddLinkDialogComponent}
-
+  { path: 'dia', component: AddLinkDialogComponent},
 ];
 
 @NgModule({

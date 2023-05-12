@@ -1,24 +1,25 @@
 <div class="container">
     <div class="login" id="login">
-        <form class="form" name="login-form" method="get" action="#">
+        <form class="form" name="login-form" method="get" action="#" #loginForm="ngForm">
             <h3>Insert Credentials</h3>
             <div class="inputs">
                 <mat-form-field class="formfield">
                     <mat-label>Username</mat-label>
-                    <mat-error>Username required</mat-error>
-                    <input matInput type="text" placeholder="username" id="username" required #username>
+                    <mat-error *ngIf="!username.valid">Username required</mat-error>
+                    <input matInput type="text" placeholder="username" id="username" name="username" required #username="ngModel" ngModel>
                 </mat-form-field>
 
                 <mat-form-field>
                     <mat-label>Password</mat-label>
-                    <mat-error>Password required</mat-error>
-                    <input matInput type="password" id="password" placeholder="password" required
-                           pattern="(?=.*\d)(?=(.*[A-Z]){2}).{8,}" #password>
+                    <mat-error *ngIf="!password.valid">Password required</mat-error>
+                    <input matInput type="password" id="password" placeholder="password" name="password" required
+                           pattern="(?=.*\d)(?=(.*[A-Z]){2}).{8,}" #password="ngModel" ngModel>
                 </mat-form-field>
             </div>
-            <button mat-raised-button color="primary" (click)="validation(username.value, password.value)">
+            <button mat-raised-button color="primary" (click)="validation(username.value, password.value)" [disabled]="!loginForm.form.valid">
                 <mat-icon>login</mat-icon> Login
             </button>
         </form>
     </div>
 </div>
+

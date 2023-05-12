@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AngularFireAuthModule} from "@angular/fire/compat/auth";
 import { AppComponent } from './app.component';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
@@ -51,7 +50,7 @@ import {MatCardModule} from "@angular/material/card";
         SongComponent,
         NavigationComponent,
         LinkListComponent,
-        AddLinkDialogComponent
+        AddLinkDialogComponent,
     ],
     imports: [
         BrowserModule,
