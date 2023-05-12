@@ -2,6 +2,7 @@ import {Component } from '@angular/core';
 import { ServiceU } from "../../services/auth";
 import {loggedIn} from "../../services/loggedIn";
 import { Router} from "@angular/router";
+import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-input',
@@ -10,7 +11,7 @@ import { Router} from "@angular/router";
 })
 export class InputComponent  {
     users!: any[];
-  constructor(private service: ServiceU,private  ServiceLog: loggedIn, private router:Router) {
+  constructor(private service: ServiceU,private  ServiceLog: loggedIn, private router:Router, private snacki: MatSnackBar) {
       this.service.getUsers().subscribe(data => {
           this.users = data;
       });
@@ -22,6 +23,8 @@ export class InputComponent  {
                 this.ServiceLog.log = true;
                 this.ServiceLog.nickn = this.users[i].nickname;
                 this.router.navigate(['/logged']);
+            }else{
+                this.snacki.open('Username or password incorrect', 'Close', {duration: 3000})
             }
         }
     }

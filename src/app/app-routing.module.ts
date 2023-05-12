@@ -8,6 +8,7 @@ import {LoggedComponent} from "./co/logged/logged.component";
 import {SongComponent} from "./co/song/song.component";
 import {LinkListComponent} from "./co/link-list/link-list.component";
 import {AddLinkDialogComponent} from "./co/add-link-dialog/add-link-dialog.component";
+import {ProfileComponent} from "./co/profile/profile.component";
 
 const routes: Routes = [
   { path: 'login', component: InputComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'linklist/:id', component: SongComponent},
   { path: 'linklist', component: LinkListComponent},
   { path: 'dia', component: AddLinkDialogComponent},
+  { path: 'profile', component: ProfileComponent},
 ];
 
 @NgModule({

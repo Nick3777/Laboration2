@@ -11,9 +11,10 @@
 
                 <mat-form-field>
                     <mat-label>Password</mat-label>
-                    <mat-error *ngIf="!password.valid">Password required</mat-error>
                     <input matInput type="password" id="password" placeholder="password" name="password" required
                            pattern="(?=.*\d)(?=(.*[A-Z]){2}).{8,}" #password="ngModel" ngModel>
+                    <mat-error *ngIf="password.errors?.['required']">Password required</mat-error>
+                    <mat-error *ngIf="password.errors?.['pattern']">Password must contain at least 8 characters including 2 uppercase letters and 1 digit</mat-error>
                 </mat-form-field>
             </div>
             <button mat-raised-button color="primary" (click)="validation(username.value, password.value)" [disabled]="!loginForm.form.valid">

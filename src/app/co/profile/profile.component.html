@@ -1,0 +1,33 @@
+<mat-card class="container">
+    <mat-card-header>
+        <div class="header-container">
+            <div mat-card-avatar class="profile-image">
+                <img [src]="profileImageUrl | async" [alt]="profileName">
+            </div>
+            <div class="general-info">
+                <mat-card-title>{{ profileName }}</mat-card-title>
+                <mat-card-subtitle class="info">{{ profileEmail }}</mat-card-subtitle>
+                <mat-card-subtitle class="info">{{ profileCountry }}</mat-card-subtitle>
+                <mat-card-subtitle class="info">{{ profileJob}}</mat-card-subtitle>
+                <mat-card-subtitle class="info">{{ profileAge}}</mat-card-subtitle>
+            </div>
+        </div>
+    </mat-card-header>
+
+    <mat-card-content class="profile-container">
+        <div class="bio-container">
+            <mat-card-subtitle class="subtitle">Bio:</mat-card-subtitle>
+            <p>{{ profileBio }}</p>
+        </div>
+
+        <div class="liked-songs-container">
+            <mat-card-subtitle class="subtitle">My Favourite Songs:</mat-card-subtitle>
+            <mat-list>
+                <mat-list-item *ngFor="let song of profileLikedSongs">
+                    <mat-icon mat-list-icon>music_note</mat-icon>
+                    <span>{{ song }}</span>
+                </mat-list-item>
+            </mat-list>
+        </div>
+    </mat-card-content>
+</mat-card>

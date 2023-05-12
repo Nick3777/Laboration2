@@ -1,0 +1,64 @@
+.container{
+    margin: 45px auto;
+    width: 60vw;
+    background-color: lightsteelblue;
+    min-height: 450px;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    height: 30%;
+    align-items: center;
+    position: relative;
+}
+
+.profile-image {
+    flex: 1;
+    height: 100%;
+}
+
+.profile-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.general-info {
+    flex: 3;
+    position: absolute;
+    padding-left: 20px;
+    left: 200px;
+    top: 0;
+    border-left: 2px solid black;
+}
+
+.profile-container {
+    height: 70%;
+    display: grid;
+    grid-template-columns: 65% 35%;
+}
+
+.bio-container, .liked-songs-container {
+    padding: 5px;
+    border: 2px solid green;
+}
+
+.bio-container {
+    grid-column: 1;
+}
+
+.liked-songs-container {
+    grid-column: 2;
+}
+
+.subtitle {
+    font-size: 25px;
+}
+
+.info{
+    font-size: 15px;
+}

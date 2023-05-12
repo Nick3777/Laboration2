@@ -21,7 +21,7 @@ export class NavigationComponent {
 
   logDisplay(){
     if (this.service.log)
-    {return 'Logged'}
+    {return 'Logout'}
     return 'Login'
   }
   logRouter(){
@@ -35,6 +35,10 @@ export class NavigationComponent {
       return `Logged in as: ${this.service.nickn}`;
     else
       return "Not logged in";
+  }
+
+  logged(){
+    return this.service.log;
   }
 
 }

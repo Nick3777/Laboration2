@@ -10,6 +10,7 @@
       <a mat-list-item routerLink="/bestSong"><mat-icon>music_note</mat-icon><span>Best Songs</span></a>
       <a mat-list-item routerLink="/iconicSong"><mat-icon>queue_music</mat-icon><span>Suggested Songs</span></a>
       <a mat-list-item routerLink="{{logRouter()}}"><mat-icon>lock_open</mat-icon><span>{{logDisplay()}}</span></a>
+      <a mat-list-item routerLink="/profile" *ngIf="logged()"><mat-icon>person</mat-icon><span>Profile</span></a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content class="mat-toolbar">

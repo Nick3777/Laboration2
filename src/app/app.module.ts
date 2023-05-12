@@ -35,6 +35,7 @@ import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatSortModule} from "@angular/material/sort";
 import {MatGridListModule} from "@angular/material/grid-list";
 import {MatCardModule} from "@angular/material/card";
+import { ProfileComponent } from './co/profile/profile.component';
 
 
 @NgModule({
@@ -51,6 +52,7 @@ import {MatCardModule} from "@angular/material/card";
         NavigationComponent,
         LinkListComponent,
         AddLinkDialogComponent,
+        ProfileComponent,
     ],
     imports: [
         BrowserModule,
