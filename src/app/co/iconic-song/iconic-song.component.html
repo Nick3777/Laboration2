@@ -4,13 +4,13 @@
         <form [formGroup]="songForm" (ngSubmit)="onSubmit()">
             <mat-form-field>
                 <mat-label>Title</mat-label>
-                <mat-error>Title is required</mat-error>
                 <input matInput formControlName="title">
+                <mat-error>Title is required</mat-error>
             </mat-form-field>
             <mat-form-field style="margin-left: 10px;">
                 <mat-label>Suggested By</mat-label>
                 <input matInput formControlName="suggestedBy">
-                <mat-error>Suggested By is required</mat-error>
+                <mat-error >Suggested By is required</mat-error>
             </mat-form-field>
             <button mat-raised-button color="primary" type="submit">Submit</button>
         </form>

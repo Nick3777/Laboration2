@@ -31,7 +31,9 @@ export class IconicSongComponent {
         sugg_by: this.songForm.value.suggestedBy || '',
       };
       this.LinkRef.add(data);
-      this.songForm.reset();
+      this.songForm.reset({title: '', suggestedBy: ''});
+      this.songForm.get('title')?.setErrors(null);
+      this.songForm.get('suggestedBy')?.setErrors(null);
       this.submitted = false;
     }
   }
