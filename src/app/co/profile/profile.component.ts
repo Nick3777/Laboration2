@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Observable } from 'rxjs';
-import { MatCardModule } from '@angular/material/card';
 import {AngularFireStorage, AngularFireStorageReference} from "@angular/fire/compat/storage";
 import { ServiceU} from "../../services/auth";
 import {loggedIn} from "../../services/loggedIn";
@@ -12,7 +10,7 @@ import {loggedIn} from "../../services/loggedIn";
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent {
-  profileName : string | undefined;
+  profileName = '';
   profileEmail : string | undefined;
   profileBio : string | undefined;
   profileJob : string | undefined;
@@ -61,5 +59,12 @@ export class ProfileComponent {
       return false;
     }
   }
+
+  updateBio(newBio: string) {
+    this.profileBio = newBio;
+    this.lu.updateUserBio(this.profileName, newBio);
+  }
+
+
 }
 

@@ -17,14 +17,19 @@
     <mat-card-content class="profile-container">
         <div class="bio-container">
             <mat-card-subtitle class="subtitle">Bio:</mat-card-subtitle>
-            <p>{{ profileBio }}</p>
+            <form #bioForm="ngForm" class="form">
+                <div class="textarea-container">
+                    <textarea [(ngModel)]="profileBio" name="bio"></textarea>
+                    <button mat-button color="primary" (click)="updateBio(bioForm.value.bio)">Save</button>
+                </div>
+            </form>
         </div>
 
         <div class="liked-songs-container">
             <mat-card-subtitle class="subtitle">My Favourite Songs:</mat-card-subtitle>
             <mat-list>
                 <mat-list-item *ngFor="let song of profileLikedSongs">
-                    <mat-icon mat-list-icon>music_note</mat-icon>
+                    <mat-icon>music_note</mat-icon>
                     <span>{{ song }}</span>
                 </mat-list-item>
             </mat-list>
